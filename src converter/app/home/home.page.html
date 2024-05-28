@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      raquel enlouquecendo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-input [(ngModel)]="distancia" placeholder="informe a distancia percorrida"></ion-input>
+
+  <ion-label>preço combustível</ion-label>
+  <ion-range (ionChange)="OnionChange($event)" [snaps]="true" [max]="5.5"></ion-range>
+  <br>
+  <label>{{valorbrutos}}</label>
+  <br>
+  <br>
+  <ion-radio-group id='bl'[(ngModel)]="atumalaca">
+  <ion-radio id='options' value="carro">carro  </ion-radio>
+  <ion-radio id='options' value="moto">moto   </ion-radio>
+  <ion-radio id='options' value="ombinus">Ônibus</ion-radio>
+  </ion-radio-group>
+  <br>
+  <ion-button (click)="calcular()">Calcular</ion-button><br>
+<label>O custo total da viagem é: {{res}}</label>
+</ion-content>
