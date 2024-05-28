@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Uso do Range
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+
+    <ion-label> gorjeta
+    </ion-label>
+    <ion-input [(ngModel)]="porc" placeholder="insira valor da conta"></ion-input>
+    <ion-range (ionChange)="onIonChange($event)"
+     [snaps]="true" [min]="0" [max]="30"></ion-range>
+
+    <ion-label>{{valorRange}}</ion-label>
+
+    <br>
+
+     <ion-button (click)="calcular()">calcular</ion-button>
+
+     <br>
+     <br>
+
+    <ion-label> valor a pagar: </ion-label>
+    <ion-label>{{res}}</ion-label>
+    <ion-label>   valor da gorjeta:</ion-label>
+    <ion-label>{{gorj}}</ion-label>
+  </div>
+</ion-content>
